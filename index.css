@@ -1,0 +1,83 @@
+/*
+    selector{
+    property:value;}
+*/
+
+/* 1. Universal Selector (*) */
+
+/* class selector (.+classname)*/
+
+/* ID selector #Idname */
+
+/* *{
+    border: 2px solid color red;
+}
+
+h1 {
+    border: 1px solid;
+    color: black;
+    background-color: aqua;
+}
+
+.a {
+    border: 1px solid;
+    color: rgb(89, 11, 158);
+    background-color: aqua
+}
+
+#b{
+    color: red;
+    background-color: yellow;
+}
+
+/* Group selector */
+/*h5,h6,
+.a {
+    font-size: 48px;
+} */
+
+/* Desecendent selector */
+.f p {
+    color: red;
+    background-color: yellow;
+}
+
+/* Child Selector */
+
+.f > p {
+    color: yellow;
+    background-color: red;
+    font-size:  32px;
+    border: 2px solid yellow;
+}
+
+/* Pseudo code :*/
+
+li:nth-child(even) {
+    color: red;
+    font-size: 15px;
+}
+
+/* Pseudo classes ::*/
+.pseudo::after{
+    content: "THIS IS SAANIDHYA VERMA";
+}
+
+.pseudo::first-line {
+    background-color: red;
+    color: yellowgreen;
+}
+
+.pseudo {
+    border: 1px solid black;
+    /* Padding */
+    /* space between content and border  */
+    /* apply on all 4 direction if only one value is given */
+    /* padding: 40px; */
+    /* padding: 40px 80px; */
+    /* First value will apply on top and bottom
+    second value will apply on right and left */
+    padding: 40px 60px 80px 100px;
+    /* Works clockwise : top right bottom left */
+    margin: 30px;
+}

@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.gridcontainer{
+    height: 50vh;
+    display: grid;
+    border: 1px solid black;
+    /* grid-template-columns: 100px 200px 300px; */
+    /* grid-template-columns: 100px, 100px, 100px; */
+    /* grid-template-columns: repeat(3,100px); */
+    grid-template-columns: repeat(3,1fr) 2fr;
+    grid-template-rows: 100px 100px 100px;
+    /* row-gap: 10px; */
+    /* column-gap: 10px; */
+    gap: 20px;
+}
+
+.griditem{
+    background-color: yellow;
+    color: red;
+    border: 1px solid red;
+    padding: 50px;
+}
+
+.griditem:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: 1 / -1;
+    grid-row: 2 /3;
+}
+
+.layout{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+        "header header header"
+        "aside main nav"
+        "footer footer footer";
+}
+
+header{
+    grid-area: header;
+    background-color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav{
+    background-color: yellow;
+    font-weight: bold;
+    text-align: center;
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+    background-color: green;
+    font-weight: bold;
+    text-align: center;
+}
+aside{
+    grid-area: aside;
+    background-color: rgb(22, 133, 173);
+    font-weight: bold;
+    text-align: center;
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(154, 17, 101);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 576px Mobile devices */
+/* 577px- 768px Tablet devices */
+/* 769px - 992px Small devices*/
+/* 993px-1200px Large devices */
+
+@media(max-width: 576px){
+    .layout{
+       
+    grid-template-columns: 1fr 3fr ;
+    
+    grid-template-areas: 
+        "header header "
+        "aside main "
+        "footer footer ";
+    }
+}
+nav{
+    display: none;
+}   
+
+@media (min-width: 577px) and (max-width: 768px){
+    .layout{
+        grid-template-areas: 
+        "header header header"
+        "aside main nav"
+        "footer footer";
+    }
+    nav{
+        background-color: blue;
+    }
+    aside{
+        background-color: forestgreen;
+    }
+    main{
+        background-color: coral;
+    }
+    footer{
+        background-color: cyan;
+    }
+}

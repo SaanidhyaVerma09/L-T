@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 90vh;
+    width: 40%;
+    border: 2px solid red;
+}
+
+p
+{
+    color: red;
+    background-color: yellow;
+    font-weight: 700;
+}
+
+.sticky
+{
+    position: sticky;
+    top: 0px;
+}
+
+.relative
+{
+    position: relative;
+}
+
+.absolute
+{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+dt
+.fixed
+{
+    position: fixed;
+    bottom: 20px;
+    height: 50px;
+    right: 100px;
+}
